@@ -1,0 +1,37 @@
+package wiprointer;
+
+/**
+ *
+ * @author Gauty
+ */
+public class WiproInter {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String s="AAABBCCDDAAABBBBBZZZZZZZZZ";
+        int count=1,i=1;
+        char prev=s.charAt(0);
+        for( i=1;i<s.length();i++)
+        {
+            if(prev==s.charAt(i))
+            {
+              count=count+1;
+            }
+            
+            else
+            {
+             System.out.print(count+""+s.charAt(i-1));
+               
+                count=1;
+               
+            }
+            prev=s.charAt(i);
+        }
+       System.out.print(count+""+s.charAt(i-1));
+        
+    }
+    
+}
